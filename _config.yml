@@ -1,0 +1,33 @@
+name: Play With Docker Training
+markdown: kramdown
+kramdown:
+  input: GFM
+  html_to_native: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+  toc_levels: 2..3
+incremental: true
+permalink: pretty
+safe: false
+lsi: false
+url: https://training.play-with-docker.com
+githuburl: https://github.com/play-with-docker/training
+docs: false
+description: "Train with Docker applications in the browser using Play With Docker! "
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-relative-links
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: docs
+      defaultassignee: manomarks
+      toc_min: 2
+      toc_max: 3
+      tree: true
