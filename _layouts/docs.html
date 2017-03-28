@@ -1,0 +1,200 @@
+<!-- relative link basehrefs -->
+{% if page.path contains "index.md" %} {% capture basehref %}{{ page.url }}{% endcapture %} {% else %} {% assign crumbs = page.url | split: '/' %} {% assign stoppingpoint = crumbs | size | minus: 1 %} {% for crumb in crumbs %} {% if forloop.index == stoppingpoint
+%} {% capture basehref %}{{basehref}}{{ crumb }}/{% endcapture %} {% break %} {% else %} {% capture basehref %}{{basehref}}{{ crumb }}/{% endcapture %} {% endif %} {% endfor %} {% endif %}
+<!-- Logic for feedback CC'ing -->
+{% if page.assignee %}{% assign assignee=page.assignee%}{% else %}{% assign assignee=page.defaultassignee%}{% endif %}
+<!-- Logic for 'edit this button' -->
+{% assign edit_url = "/edit/master/" | append: page.path %} {% for entry in site.data.not_edited_here.overrides %} {% if page.url contains entry.path %} {% if entry.source %}{% assign edit_url = entry.source %}{%
+else %}{% assign edit_url = "" %}{% endif %} {% break %} {% endif %} {% endfor %}
+
+<!-- End of logic for 'edit this button' -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base href="{{ basehref }}" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@charset "UTF-8";
+		[ng\:cloak],
+		[ng-cloak],
+		[data-ng-cloak],
+		[x-ng-cloak],
+		.ng-cloak,
+		.x-ng-cloak,
+		.ng-hide:not(.ng-hide-animate) {
+			display: none !important;
+		}
+
+		ng\:form {
+			display: block;
+		}
+	</style>
+	{% if site.docs==true %}
+	{% if page.url contains "/datacenter/" %}<script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=k6svi4faiclrdpi5eax4n23dzy"></script>{% endif %}
+	<script type="text/javascript">
+	  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+	  analytics.load("IWj9D0UpZHZdZUZX9jl98PcpBFWBnBMy");
+	  analytics.page();
+	  }}();
+	</script>
+	{% if site.GH_ENV == "gh_pages" %}
+	<meta name="robots" content="noindex">{% endif %}
+	{% endif %}
+	<!-- favicon -->
+	<link rel="icon" type="image/x-icon" href="/favicons/docs@2x.ico" sizes="129x128">
+	<meta name="msapplication-TileImage" content="/favicons/docs@2x.ico">
+	<link rel="apple-touch-icon" type="image/x-icon" href="/favicons/docs@2x.ico" sizes="129x128">
+	<meta property="og:image" content="/favicons/docs@2x.ico"/>
+	<!-- metadata -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:updated_time" content="{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}"/>
+	<meta property="og:image" itemprop="image primaryImageOfPage" content="/images/docs@2x.png"/>
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:domain" content="{{ site.url }}"/>
+	<meta name="twitter:title" itemprop="title name" content="{{ page.title }}"/>
+	<meta name="twitter:description" property="og:description" itemprop="description" content="{{ content | strip_html | truncatewords: 30}}" />
+	<meta name="twitter:image:src" content="/images/docs@2x.png"/>
+	<meta name="twitter:image:alt" content="{{ site.name }}"/>
+	<meta property="article:published_time" content="{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}docker, docker open source, docker platform, distributed applications, microservices, containers, docker containers, docker software, docker virtualization{% endif %}">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link id="pagestyle" rel="stylesheet" href="/css/style.css">
+
+	<!-- Go get "Open Sans" font from Google -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<!-- temp css will be removed -->
+	<link rel="stylesheet" href="/css/temp.css"> {% seo %} {% if page.hide_from_sitemap %}
+	<meta name="robots" content="noindex" />{% endif %}
+</head>
+<body ng-app="Docker" ng-controller="DockerController" class="colums">
+	<header>
+		{% if page.landing == true %}{% include global-header.html %}{% endif %} {% if page.landing != true %}{% include header.html %}{% endif %}
+	</header>
+
+	<div class="{% if page.landing == true %}wrapper{%else%}wrapper right-open{% endif %}">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-body">
+					<main class="col-content {% if page.landing == true %}main-content{%else%}content{% endif %}">
+						<section class="section">
+							{% if page.title %}
+							<h1>{{ page.title }}</h1>{% endif %} {% if page.advisory %}
+							<blockquote>{{ site.data.advisories.texts[page.advisory] | markdownify }}</blockquote>{% endif %} {% unless page.tree == false %}{% include read_time.html %}{% endunless %}{{ content }}
+              <script language="JavaScript">
+							var x = document.links.length;
+							var baseHref = document.getElementsByTagName('base')[0].href
+							for (i = 0; i < x; i++) {
+							  var munged = false;
+							  var thisHREF = document.links[i].href;
+							  var originalURL = "{{ page.url }}";
+							  if (thisHREF.indexOf(baseHref + "#") > -1) {
+							    // hash fix
+							    //console.log('BEFORE: base:',baseHref,'thisHREF:',thisHREF,'originalURL:',originalURL);
+							    thisHREF = originalURL + thisHREF.replace(baseHref, "");
+							    //console.log('AFTER: base:',baseHref,'thisHREF:',thisHREF,'originalURL:',originalURL);
+							  }
+							  if ((thisHREF.indexOf(window.location.hostname) > -1 || thisHREF.indexOf('http') == -1) && document.links[i].className.indexOf("nomunge") < 0) {
+							    munged = true;
+							    thisHREF = thisHREF.replace(".md", "/").replace("/index/", "/");
+							    document.links[i].setAttribute('href', thisHREF);
+							  }
+							}
+							</script>
+							{% if page.noratings != true %}
+						  <div style="text-align: center; margin-top: 50px">
+								<img src="/images/chat.png" alt="chat icon" style="display:inline">
+								<b>Feedback?</b> Suggestions? Can't find something?<br/> {% if edit_url != "" %}
+								<a href="{{ site.githuburl }}{{ edit_url }}">Edit this page</a> <span>&#9679;</span> {% endif %}
+								<a href="{{ site.githuburl }}/issues/new?title=Feedback for: {{ page.path }}&assignee={% if page.assignee %}{{ page.assignee }}{% else %}{{ page.defaultassignee }}{% endif %}&body=File: [{{ page.path }}]({{ site.url}}{{ page.url }})"
+												class="nomunge">Request changes</a> {% if site.docs==true %}<span>&#9679;</span> <a href="https://www.docker.com/docker-support-services">Get support</a>{% endif %}<br />
+								{% if site.docs==true %}
+								<div id="pd_rating_holder_8453675"></div>
+								<script type="text/javascript">
+									PDRTJS_settings_8453675 = {
+										"id": "8453675",
+										"unique_id": "{{ page.path }}",
+										"title": "{{ page.title }}",
+										"permalink": "{{ site.githuburl }}/blob/master/{{ page.path }}"
+									};
+									(function(d, c, j) {
+										if (!document.getElementById(j)) {
+											var pd = d.createElement(c),
+												s;
+											pd.id = j;
+											pd.src = ('https:' == document.location.protocol) ? 'https://polldaddy.com/js/rating/rating.js' : 'http://i0.poll.fm/js/rating/rating.js';
+											s = document.getElementsByTagName(c)[0];
+											s.parentNode.insertBefore(pd, s);
+										}
+									}(document, 'script', 'pd-rating-js'));
+								</script>
+								{% endif %}
+							</div>
+							{% endif %}
+						</section>
+					</main>
+					<nav class="col-nav">
+						<div class="sidebar{% if page.landing == true %}-home{%else%}{% endif %} hidden-sm hidden-xs">
+						{% include side-menu.html %}
+						</div>
+					</nav>
+					<div class="col-toc">
+							<div id="{% if page.landing == true %}sidebar-wrapper-home{%else%}sidebar-wrapper{% endif %}" class="{% if page.landing == true %} affix-top{%else%}sidebar-wrapper toc-nav{% endif %}" {% if page.landing == true %} data-spy="affix" data-offset-top="490"{% endif %}>
+							<div class="toc-nav">
+								<div class="feedback-links">
+									<ul>
+										{% if edit_url != "" %}
+										<li><a href="{{ site.githuburl }}{{ edit_url }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit this page</a></li>{% endif %}
+										<li><a href="{{ site.githuburl }}/issues/new?title=Feedback for: {{ page.path }}&assignee={% if page.assignee %}{{ page.assignee }}{% else %}{{ page.defaultassignee }}{% endif %}&body=File: [{{ page.path }}]({{ site.url }}{{ page.url }})"
+															class="nomunge"><i class="fa fa-check" aria-hidden="true"></i> Request changes</a></li>
+										{% if site.docs==true %}<li><a href="https://www.docker.com/docker-support-services"><i class="fa fa-question" aria-hidden="true"></i> Get support</a></li>{% endif %}
+										<!-- day/night switch
+										<li>
+											<div class="toggle-mode">
+												<div class="icon">
+													<i class="fa fa-sun-o" aria-hidden="true"></i>
+												</div>
+												<div class="toggle-switch">
+													<label class="switch">
+														<input type="checkbox" id="switch-style">
+														<div class="slider round"></div>
+												</label>
+												</div>
+												<div class="icon">
+													<i class="fa fa-moon-o" aria-hidden="true"></i>
+												</div>
+											</div>
+										</li> -->
+									</ul>
+								</div>
+								{% unless page.notoc %} {% assign my_min = page.toc_min | default: site.toc_min | default: 2 %} {% assign my_max = page.toc_max | default: site.toc_max | default: 3 %} {% assign my_name = page.url | default: "unnamed" %}
+									<div id="side-toc-title">On this page:</div>
+									{% include toc_pure_liquid.html html=content sanitize=true class="inline_toc" id="my_toc" toc_min=my_min toc_max=my_max page_name=my_name %}
+								</div>
+								{% endunless %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		{% include footer.html %}
+	</footer>
+	<link rel="stylesheet" href="/css/github.css">
+	<script src="/js/highlight.pack.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+	<!-- <script src="/js/anchorlinks.js"></script> -->
+	<script defer src="/js/menu.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script defer src="/js/docs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+horizontalnav:
+- title: Tab
+  path: /
+  node: tab
+
+
+tab:
+- sectiontitle: Example nav
+  section:
+  - path: /
+    title: Home Page
