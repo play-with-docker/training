@@ -12,13 +12,20 @@ safe: false
 lsi: false
 url: https://training.play-with-docker.com
 githuburl: https://github.com/play-with-docker/training
-docs: false
-description: "Train with Docker applications in the browser using Play With Docker! "
+docs: no
+description: >
+  Train with Docker applications in the browser using Play With Docker! 
+default-image: docker-logo.png
+built-by: PWD Team
+copyright:
+   name: Docker, Inc.
+   link: 'https://docker.com'
 
 gems:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-relative-links
+  - jekyll-paginate
 
 defaults:
   -
@@ -31,3 +38,17 @@ defaults:
       toc_min: 2
       toc_max: 3
       tree: true
+facebook: https://www.facebook.com/docker.run
+twitter: https://twitter.com/@docker
+github: https://github.com/play-with-docker/play-with-docker.github.io
+
+#facebook like box
+fb-app-id: 549480635219583
+fb-page-url: https://www.facebook.com/docker.run/
+fb-page-title: Docker
+
+sass:
+  style: compressed
+
+paginate: 6
+paginate_path: /page:num/

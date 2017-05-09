@@ -1,3 +1,22 @@
+<head>
+{% comment %}
+{% seo %}
+{% endcomment %}
+  
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+<link rel="stylesheet" href="{{site.baseurl}}/css/xterm.css">
+<style>
+          {% capture include_to_scssify %}
+          {% include main.scss %}
+          {% endcapture %}
+          {{ include_to_scssify | scssify }}
+</style>  
+</head>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">  
+<link rel="stylesheet" href="{{site.baseurl}}/css/quiz.css">
 <nav class="nav-secondary navbar navbar-fixed-top">
     <div class="fan"></div>
     <div class="container-fluid">
@@ -8,16 +27,7 @@
             <!-- a href="/"><img class="logo" src="/images/dockerlogo.svg" alt="Docker logo" title="Docker logo"></a -->
         </div>
         <div class="navbar-collapse" aria-expanded="false" style="height: 1px;">
-            <div class="search-form" id="search-div">
-                <form>
-                    <form class="search-form form-inline ng-pristine ng-valid" id="searchForm" {% if site.docs==true %}action="/search/"{% endif %}>
-                        <input class="search-field form-control ds-input" id="st-search-input" value="" name="q" placeholder="Search{% if site.docs==true %} the docs{% endif %}" type="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;">
-                        <div id="autocompleteContainer">
-                            <div id="autocompleteResults"></div>
-                        </div>
-                        <!-- <button type="submit" class="search-submit btn btn-default">Search</button> -->
-                    </form>
-            </div>
+
             <div class="sidebar-toggle">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -32,17 +42,17 @@
                 </ul>
             </div>
             <div class="ctrl-right">
-                <a href="javascript:void(0)" id="menu-toggle"><i class="fa fa-indent" aria-hidden="true"></i></a>
+                {% if site.docs==true %}<a href="javascript:void(0)" id="menu-toggle"><i class="fa fa-indent" aria-hidden="true"></i></a>
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Docker 17.03 (current) <span class="caret"></span>
-                    </button>
+                    </button> 
                     <ul class="dropdown-menu">
                         {% for item in site.data.docsarchive.docker-compose %}
                         <li><a href="/{{ item[0] }}/">Docker {{ item[0] }}</a></li>
                         {% endfor %}
                     </ul>
-                </div>
+                </div>{% endif %}
             </div>
         </div>
     </div>
