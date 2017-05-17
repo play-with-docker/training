@@ -15,9 +15,9 @@ layout: compress
     {% include header.html %}
 
     {{ content }}
-
+    {% if page.layout != 'post' %}
     {% include footer.html %}
-    
+    {% endif %}
 <script async>
     (function() {
         var font = document.createElement('link'); 
