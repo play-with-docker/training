@@ -1,11 +1,22 @@
 horizontalnav:
-- title: Tab
+- title: Self-Paced Learning
   path: /
-  node: tab
+  node: guides
 
-
-tab:
-- sectiontitle: Example nav
+guides:
+- sectiontitle: Docker for Developers
   section:
-  - path: /
-    title: Home Page
+    - path: /devs/
+      title: General
+    - path: /devs/java/
+      title: Docker for Java Developers
+    - path: /devs/dotnet/
+      title: Docker for .NET Developers
+- sectiontitle: Docker for Operators
+  section:
+    - path: /ops/
+      title: General
+    - path: /ops/java/
+      title: Java Operators
+    - path: /ops/dotnet/
+      title: .NET Operators
