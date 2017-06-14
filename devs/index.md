@@ -16,28 +16,24 @@ This stage will
   
   * Get you familiar with the core concepts of Docker
 
-  * Help you understand the fundamental value proposition for Docker
-
-  * Help you see how Docker can help your organization
+  * Show you how to build and deploy basic applications
 
 
 ## [Stage 2: Digging Deeper](stage2.md)
 
-This stage will help you
+This stage show you how to
 
-  * Understand the architecture of Docker, and the core features
+  * Create and run Docker image registries
 
-  * Understand how to integrate Docker into your existing application infrastructure
-
-  * Develop a proof of concept application deployment
+  * Use Docker with in a continuous integration environment
+ 
 
 ## [Stage 3: Moving to production](stage3.md)
 
 This final stage will help you
 
-  * Implement a full proof of concept application
+  * Deploy an application to a staging environment
 
-  * Develop a strategy for integrating Docker into your existing production 
-  environment
+  * Manage your staging environment with Docker Swarm Mode
 
-  * Become recognized as a leader in your organization on implementing Docker
+  * Learn how to build a secure application
