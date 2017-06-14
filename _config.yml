@@ -1,4 +1,4 @@
-name: Play With Docker Training
+name: Docker Training
 markdown: kramdown
 kramdown:
   input: GFM
@@ -14,7 +14,7 @@ url: https://training.play-with-docker.com
 githuburl: https://github.com/play-with-docker/training
 docs: no
 description: >
-  Train with Docker applications in the browser using Play With Docker! 
+  Learn Docker From Docker. Official Docker Training. 
 default-image: docker-logo.png
 built-by: PWD Team
 copyright:
