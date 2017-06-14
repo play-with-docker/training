@@ -1,9 +1,8 @@
 # Contributing
-
-Just check the [posts](https://github.com/franela/franela.github.io/tree/master/_posts) folder and submit your tutorials there.
+[TODO: More info later]
 
 # Running trainings site
 
-Clone the repo and run the following docker container: `docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 4000:4000 jekyll/jekyll jekyll serve`
+`docker-compose up` builds the site and deploys it locally most quickly.
 
 Browser the site by visiting http://localhost:4000
