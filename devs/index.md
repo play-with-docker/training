@@ -1,30 +1,43 @@
 ---
 description: Devs
-keywords: developers
+keywords: developer
 landing: true
-title: Developers
+title: Docker for Developers
 categories: developers
+notoc: true
 ---
-  <h2>Stage 1</h2>
-  <div>
-  <ol>
-    <li><a href="./helloworld">Getting started</a></li>
-    <li><a href="./alpine">First Alpine Linux Container</a></li>
-    <li><a href="./webapps">A Simple Web App</a></li>
-    <li><a href="./swarm-stack-intro">Deploying a Multi-Service App in Docker Swarm Mode</a></li>
-  </ol>
-  </div>
 
-  <h2>Stage 2</h2>
-  <ol>
-    <li>TODO: CI Overview</li>
-    <li>TODO: Cloud build lab</li>
-    <li>TODO: DTR Lab</li>
-    <li><a href="./linux-registry-part1">Docker registry for Linux Part 1</a></li>
-    <li><a href="./linux-registry-part2">Docker registry for Linux Part 2</a></li>
-  </ol>
-  <h2>Stage 3</h2>
-  <ol>
-    <li>TODO: Docker Cloud Swarm Management</li>
-  	<li>TODO: Fleet Management</li>
-  </ol>
+
+This self-paced learning journey for Developers will help you understand and be able to deploy applications with Docker. We've designed three stages.
+
+## [Stage 1: The Basics](stage1.md)
+
+This stage will 
+  
+  * Get you familiar with the core concepts of Docker
+
+  * Help you understand the fundamental value proposition for Docker
+
+  * Help you see how Docker can help your organization
+
+
+## [Stage 2: Digging Deeper](stage2.md)
+
+This stage will help you
+
+  * Understand the architecture of Docker, and the core features
+
+  * Understand how to integrate Docker into your existing application infrastructure
+
+  * Develop a proof of concept application deployment
+
+## [Stage 3: Moving to production](stage3.md)
+
+This final stage will help you
+
+  * Implement a full proof of concept application
+
+  * Develop a strategy for integrating Docker into your existing production 
+  environment
+
+  * Become recognized as a leader in your organization on implementing Docker

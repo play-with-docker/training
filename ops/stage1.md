@@ -2,7 +2,7 @@
 description: Ops
 keywords: ops, system administrator, IT Pro
 landing: true
-title: Docker for Ops\: The Basics
+title: Docker for Ops The Basics
 notoc: true
 ---
 
