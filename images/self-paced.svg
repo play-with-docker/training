@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="54px" viewBox="0 0 55 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>SelfpacedTraining_68</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Training" transform="translate(-777.000000, -566.000000)">
+            <g id="SelfpacedTraining_68" transform="translate(771.000000, 559.000000)">
+                <g id="Page-1">
+                    <g>
+                        <g id="SelfpacedTraining_68">
+                            <rect id="Boarder" x="0" y="0" width="68" height="68"></rect>
+                            <path d="M59.0603027,17.0290527 L51.0037231,17.0290527 L51.0037231,9.06103516 L22.0186768,9.06103516 L22.0186768,59.0339355 L59.0603027,59.0339355 L59.0603027,17.0290527 Z M61,61 L20,61 L20,20.96875 L20,7 L51.036377,7 L61,16.9992676 L61,61 Z" id="Stroke-1" fill="#1488C6"></path>
+                            <g id="Group" transform="translate(6.000000, 15.000000)" fill="#2089C4">
+                                <path d="M14,16.7142857 C9.75714286,16.7142857 6.28571429,13.2428571 6.28571429,9 C6.28571429,4.75714286 9.75714286,1.28571429 14,1.28571429 L14,1.28571429 L14,1.28571429 M14,0 C8.98571429,0 5,3.98571429 5,9 C5,14.0142857 8.98571429,18 14,18" id="path-1_1_"></path>
+                                <g id="Mask" transform="translate(0.000000, 22.000000)">
+                                    <path d="M15.15754,4.7496821 C14.5467271,5.0296151 14,5.0296151 14,5.0296151 C14,5.0296151 11.193773,4.8939803 11.193773,1.7743798 C11.193773,-1.4808555 5.86194162,0.1467622 3.0557146,3.5376323 C0.249487571,6.7928676 -1.43424864,11.6757206 1.65260108,13.3033382 C4.73945081,14.7953211 14,19 14,19 C14,19 15.1654898,19.4149652 15.4328356,18.3461371 C15.7436523,17.1035156 15.9305621,4.3954093 15.15754,4.7496821 Z" id="path-1"></path>
+                                </g>
+                            </g>
+                            <path d="M28,26 L54,26 L54,28 L28,28 L28,26 Z M28,35 L47,35 L47,37 L28,37 L28,35 Z M28,44 L43,44 L43,46 L28,46 L28,44 Z" id="Shape" fill="#1488C6"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

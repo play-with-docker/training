@@ -13,7 +13,7 @@ notoc: true
 
   * [Your First Linux Container](./alpine)
 
-  * [Developing a Simple Web App][./webapps]
+  * [Developing a Simple Web App](./webapps)
 
   * [Deploying a Multi-Service App in Docker Swarm Mode](./swarm-stack-intro)
 
