@@ -183,29 +183,10 @@ img {
 */
 
 .header {
-    animation: gradientswitch 50s infinite;
-    -webkit-animation: gradientswitch 50 sinfinite;
+    background: #0087C9;
     height: 500px;
     position: relative;
     z-index: 1;
-}
-
-@keyframes gradientswitch
-    {
-      0%   {background: #1488C6;}
-      25%  {background: #0C5176;}
-      50%  {background: #BB4258;}
-      75%  {background: #0C5176;}
-      100% {background: #1488C6;}
-    }
-
-    @-webkit-keyframes gradientswitch /* Safari and Chrome - necessary duplicate */
-    {
-      0%   {background: #1488C6;}
-      25%  {background: #0C5176;}
-      50%  {background: #BB4258;}
-      75%  {background: #0C5176;}
-      100% {background: #1488C6;}
 }
 
 /*
