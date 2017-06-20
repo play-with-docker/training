@@ -30,7 +30,7 @@ noratings: true
     {% endfor %}
   </div>
 </div>
-<div><p>Learn Docker with Official Instructor-led and Online Training Offerings through Docker's Training Partner Network.</p>
+<div>
 <div class="col-md-4 comp-block" style="position: relative; min-height: 350px;"><img src="/images/instructor.svg" alt="" />
 <h3>Instructor Led Training</h3>
 <h6><g class="gr_ gr_14 gr-alert gr_spell undefined ContextualSpelling" id="14" data-gr-id="14">Training</g> for Enterprise</h6>

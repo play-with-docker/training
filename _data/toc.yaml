@@ -1,6 +1,6 @@
 horizontalnav:
 - title: Instructor Lead Training
-  path: /training/
+  path: /instructor-led-training/
 - title: Self-Paced Learning
   path: /
   node: guides

@@ -160,59 +160,10 @@ p {
 */
 
 .header {
-    animation: gradientswitch 50s infinite;
-    -webkit-animation: gradientswitch 50 sinfinite;
+    background: #0087C9;
     height: 500px;
     position: relative;
     z-index: 1;
-}
-
-@keyframes gradientswitch {
-    0% {
-        background: #0087C9;
-    }
-    16% {
-        background: #EF4A53;
-    }
-    32% {
-        background: #FFB463;
-    }
-    49% {
-        background: #33D5D4;
-    }
-    65% {
-        background: #254356;
-    }
-    81% {
-        background :#5B4097
-    }
-    100% {
-        background: #0087C9
-    }
-}
-
-@-webkit-keyframes gradientswitch {
-    0% {
-        background: #0087C9;
-    }
-    16% {
-        background: #EF4A53;
-    }
-    32% {
-        background: #FFB463;
-    }
-    49% {
-        background: #33D5D4;
-    }
-    65% {
-        background: #254356;
-    }
-    81% {
-        background :#5B4097
-    }
-    100% {
-        background: #0087C9
-    }
 }
 
 .fan {
